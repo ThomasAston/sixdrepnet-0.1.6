@@ -84,7 +84,7 @@ if __name__ == '__main__':
                 utils.plot_pose_cube(frame, y_pred_deg, p_pred_deg, r_pred_deg, 
                                      x_min + bbox_width // 2, y_min + bbox_height // 2, size=bbox_width)
                 
-                with open('predictions_aflw2000.txt', 'a') as f:
+                with open('predictions.txt', 'a') as f:
                     f.write(f'Roll: {p_pred_deg.item():.2f}, Pitch: {y_pred_deg.item():.2f}, Yaw: {r_pred_deg.item():.2f}\n')
 
             if out:
