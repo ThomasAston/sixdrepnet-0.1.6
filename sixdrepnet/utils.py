@@ -165,6 +165,7 @@ def compute_rotation_matrix_from_ortho6d(poses):
 def compute_euler_angles_from_rotation_matrices(rotation_matrices):
     batch = rotation_matrices.shape[0]
     R = rotation_matrices
+    print(R)
     sy = torch.sqrt(R[:,2,2]*R[:,2,2]+R[:,0,2]*R[:,0,2])
     singular = sy<1e-6
     singular = singular.float()
